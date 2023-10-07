@@ -20,6 +20,8 @@ namespace OOP_Pirates
         }
 
         internal List<Pirate> Crew { get => crew;}
+        public string Name { get => name; set => name = value; }
+        internal Captain Captain { get => captain; set => captain = value; }
 
         public void FillShip(string captainName)
         {

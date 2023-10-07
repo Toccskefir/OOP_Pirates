@@ -19,7 +19,15 @@ namespace OOP_Pirates
             Console.WriteLine(ship2);
 
             //battle
-            ship1.Battle(ship2);
+            Console.WriteLine("--------------------------------------------After a battle--------------------------------------------");
+            if (ship1.Battle(ship2))
+            {
+                Console.WriteLine(ship1.Name + " is the winner.");
+            }
+            else
+            {
+                Console.WriteLine(ship2.Name + " is the winner.");
+            }
             Console.WriteLine(ship1);
             Console.WriteLine(ship2);
             Console.ReadKey();
