@@ -31,7 +31,7 @@ namespace OOP_Pirates
             int otherNumberOfShip = 0;
             Ship thisCurrentShip = this.ships[thisNumberOfShip];
             Ship otherCurrentShip = otherArmada.Ships[otherNumberOfShip];
-            while (thisNumberOfShip <= this.ships.Count && otherNumberOfShip <= otherArmada.Ships.Count)
+            while (thisNumberOfShip + 1 < this.ships.Count && otherNumberOfShip + 1 < otherArmada.Ships.Count)
             {
                 if(thisCurrentShip.Battle(otherCurrentShip))
                 {
@@ -45,7 +45,7 @@ namespace OOP_Pirates
                 }
             }
 
-            if (thisNumberOfShip == this.ships.Count)
+            if (thisNumberOfShip + 1 == this.ships.Count)
             {
                 return false;
             }
